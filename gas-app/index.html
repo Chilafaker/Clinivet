@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <title>PV-OS - Inicio</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; }
+      nav a { margin-right: 12px; }
+      .card { border: 1px solid #ccc; padding: 16px; border-radius: 8px; max-width: 720px; }
+    </style>
+  </head>
+  <body>
+    <h1>PV-OS</h1>
+    <nav>
+      <a href="?page=entrada">Entrada</a>
+      <a href="?page=servicio">Servicio</a>
+      <a href="?page=historial">Historial</a>
+      <a href="?page=inventario">Inventario</a>
+      <a href="?page=dashboard">Dashboard</a>
+    </nav>
+    <div class="card">
+      <p>Usa el menú para registrar clientes, pacientes y servicios directamente sobre la hoja <strong>PV_Base_Datos</strong>.</p>
+      <ul>
+        <li>La Base de Clientes y Pacientes se actualiza con búsquedas por teléfono.</li>
+        <li>Los servicios toman automáticamente el precio desde <em>Lista_Precios</em>.</li>
+        <li>Consulta servicios previos en el Historial.</li>
+      </ul>
+    </div>
+    <script><?!= include('app'); ?></script>
+  </body>
+</html>

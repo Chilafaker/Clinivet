@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <title>PV-OS - Historial</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Historial de servicios</h1>
+    <nav>
+      <a href="?page=index">Inicio</a>
+      <a href="?page=entrada">Entrada</a>
+      <a href="?page=servicio">Servicio</a>
+      <a href="?page=inventario">Inventario</a>
+      <a href="?page=dashboard">Dashboard</a>
+    </nav>
+
+    <section>
+      <label>Buscar paciente</label>
+      <input type="text" id="buscar-historial" placeholder="ID o nombre" />
+      <label>Paciente</label>
+      <select id="paciente-historial"></select>
+    </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID Servicio</th>
+          <th>Fecha</th>
+          <th>Servicio</th>
+          <th>Precio</th>
+          <th>Método de pago</th>
+          <th>Próxima visita</th>
+          <th>Notas</th>
+        </tr>
+      </thead>
+      <tbody id="historial-body"></tbody>
+    </table>
+
+    <script><?!= include('app'); ?></script>
+  </body>
+</html>

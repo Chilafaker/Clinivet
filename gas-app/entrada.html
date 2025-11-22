@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <title>PV-OS - Entrada</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; }
+      form { margin-bottom: 20px; border: 1px solid #ccc; padding: 12px; border-radius: 8px; }
+      label { display: block; margin-top: 8px; }
+      input, textarea { width: 100%; box-sizing: border-box; }
+    </style>
+  </head>
+  <body>
+    <h1>Registro de entrada</h1>
+    <nav>
+      <a href="?page=index">Inicio</a>
+      <a href="?page=servicio">Servicio</a>
+      <a href="?page=historial">Historial</a>
+      <a href="?page=inventario">Inventario</a>
+      <a href="?page=dashboard">Dashboard</a>
+    </nav>
+
+    <section>
+      <h2>Buscar cliente por teléfono</h2>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="Telefono" placeholder="Ej: 5512345678" />
+      <button id="buscar-cliente" type="button">Buscar</button>
+    </section>
+
+    <form id="cliente-form">
+      <h3>Datos del dueño</h3>
+      <input type="hidden" name="ID_Cliente" />
+      <label>Nombre</label>
+      <input type="text" name="Nombre_Dueno" required />
+      <label>Teléfono</label>
+      <input type="tel" name="Telefono" required />
+      <label>Mascotas (lista rápida)</label>
+      <input type="text" name="Mascotas" placeholder="Nombres separados por coma" />
+      <label>Servicios frecuentes</label>
+      <input type="text" name="Servicios_Frecuentes" />
+      <label>Fecha primera visita</label>
+      <input type="date" name="Fecha_Primera_Visita" />
+      <label>Fecha última visita</label>
+      <input type="date" name="Fecha_Ultima_Visita" />
+      <label>Notas</label>
+      <textarea name="Notas" rows="3"></textarea>
+      <button type="submit">Guardar cliente</button>
+    </form>
+
+    <form id="paciente-form">
+      <h3>Agregar/actualizar paciente</h3>
+      <label>ID Paciente (dejar vacío para nuevo)</label>
+      <input type="text" name="ID_Paciente" />
+      <label>Nombre</label>
+      <input type="text" name="Nombre_Paciente" required />
+      <label>Especie</label>
+      <input type="text" name="Especie" />
+      <label>Raza</label>
+      <input type="text" name="Raza" />
+      <label>Edad</label>
+      <input type="text" name="Edad" />
+      <label>Peso</label>
+      <input type="text" name="Peso" />
+      <label>Alergias</label>
+      <input type="text" name="Alergias" />
+      <label>Frecuencia baño</label>
+      <input type="text" name="Frecuencia_Bano" />
+      <label>Fecha próxima vacuna</label>
+      <input type="date" name="Fecha_Proxima_Vacuna" />
+      <label>Fecha próximo baño</label>
+      <input type="date" name="Fecha_Proximo_Bano" />
+      <label>Notas clínicas</label>
+      <textarea name="Notas_Clinicas" rows="3"></textarea>
+      <button type="submit">Guardar paciente</button>
+    </form>
+
+    <section>
+      <h3>Mascotas del cliente</h3>
+      <ul id="pacientes-list"></ul>
+    </section>
+
+    <script><?!= include('app'); ?></script>
+  </body>
+</html>
