@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <title>PV-OS - Inventario</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Inventario / Lista de precios</h1>
+    <nav>
+      <a href="?page=index">Inicio</a>
+      <a href="?page=entrada">Entrada</a>
+      <a href="?page=servicio">Servicio</a>
+      <a href="?page=historial">Historial</a>
+      <a href="?page=dashboard">Dashboard</a>
+    </nav>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Servicio</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="inventario-body"></tbody>
+    </table>
+
+    <script><?!= include('app'); ?></script>
+  </body>
+</html>
